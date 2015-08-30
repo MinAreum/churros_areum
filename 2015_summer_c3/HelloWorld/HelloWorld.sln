@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "HelloWorld.vcxproj", "{BFA6B749-EF1A-4708-86D7-B5F79E0C5B41}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "view", "view", "{94E75833-0B33-458F-A6E2-330748215938}"
+	ProjectSection(SolutionItems) = preProject
+		ChildView.cpp = ChildView.cpp
+		ChildView.h = ChildView.h
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFA6B749-EF1A-4708-86D7-B5F79E0C5B41}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BFA6B749-EF1A-4708-86D7-B5F79E0C5B41}.Debug|Win32.Build.0 = Debug|Win32
+		{BFA6B749-EF1A-4708-86D7-B5F79E0C5B41}.Release|Win32.ActiveCfg = Release|Win32
+		{BFA6B749-EF1A-4708-86D7-B5F79E0C5B41}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
