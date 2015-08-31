@@ -28,8 +28,6 @@ public:
    void GammaCorrection(double gamma);
    CScrollBar		scrollBar;
    int sum;
-   int m_bDown;
-   int m_ptDown;
    void SpatialFilter3x3(double*mask);
 
 // Operations
@@ -74,6 +72,6 @@ public:
 	afx_msg void OnFilterSharpen();
 	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
 	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
-	//afx_msg void OnMouseMove(UINT nFlags, CPoint point);
+	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
 };
 

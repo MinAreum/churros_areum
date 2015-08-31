@@ -444,19 +444,19 @@ void CChildView::OnLButtonUp(UINT nFlags, CPoint point)
 }
 
 
-//void CChildView::OnMouseMove(UINT nFlags, CPoint point)
-//{
-//	if(m_bDown){
-//
-// 		int diff = m_ptDown. y -point .y;
-//		unsigned char lut[256];
-//		for(int i = 0; i<255; i++){
-//		}
-//		for(int i = 0; i<imageWidth*imageHeight; i++){
-//			dstData[i] = lut[srcData[i]];
-//		}
-//		Invalidate(FALSE);
-//	}
-//
-//	CWnd::OnMouseMove(nFlags, point);
-//}
+void CChildView::OnMouseMove(UINT nFlags, CPoint point)
+{
+	if(leftButtonDown){
+
+		int diff = leftButtonPoint. y -point .y;
+		unsigned char lut[256];
+		for(int i = 0; i<255; i++){
+		}
+		for(int i = 0; i<imageWidth*imageHeight; i++){
+			dstData[i] = lut[srcData[i]];
+		}
+		Invalidate(FALSE);
+	}
+
+	CWnd::OnMouseMove(nFlags, point);
+}
