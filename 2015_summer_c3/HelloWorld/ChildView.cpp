@@ -451,6 +451,7 @@ void CChildView::OnMouseMove(UINT nFlags, CPoint point)
 		int diff = leftButtonPoint. y -point .y;
 		unsigned char lut[256];
 		for(int i = 0; i<255; i++){
+			lut[i] = Clip(i+diff, 0, 255);
 		}
 		for(int i = 0; i<imageWidth*imageHeight; i++){
 			dstData[i] = lut[srcData[i]];
