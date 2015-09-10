@@ -17,7 +17,10 @@ public:
 public:
    BITMAPINFO *bitmapInfo;
    unsigned char *dibData;
+   short *src;
+   unsigned int Step;
    unsigned char *dstData;
+   unsigned char *w_dstData;
    unsigned char Clip (int value, int low, int high);
    unsigned char *srcData; 
    int samplePerPixel;
@@ -29,12 +32,23 @@ public:
    CScrollBar		scrollBar;
    int sum;
    void SpatialFilter3x3(double*mask);
+   CString Photometric; 
+   int BitsAllocated;
+   int BitsStored;
+   int PixelRepresentation;
+   double WindowWidth;
+   double WindowCenter;
+
 
 // Operations
 public:
 	BOOL leftButtonDown;
 	CPoint leftButtonPoint;
-
+	BOOL rightButtonDown;
+	CPoint rightButtonPoint;
+	void OpenBMPFile(CString path);//해줘야해
+	void OpenDICOMFile(CString path);	//해줘야해
+	BOOL CreateDIB(); //(DIB함수 만들때 불로 하는게 좋음)
 // Overrides
 	protected:
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
@@ -73,5 +87,7 @@ public:
 	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
 	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
 	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
+	afx_msg void OnRButtonDown(UINT nFlags, CPoint point);
+	afx_msg void OnRButtonUp(UINT nFlags, CPoint point);
 };
 

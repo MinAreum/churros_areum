@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="KDicomD">
+      <UniqueIdentifier>{58beb8fa-b059-493a-9d5f-80679b22f430}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -23,6 +26,9 @@
       <Filter>리소스 파일</Filter>
     </None>
     <None Include="ClassDiagram1.cd" />
+    <None Include="KDicomD\I0072832.dcm">
+      <Filter>KDicomD</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HelloWorld.h">
@@ -43,6 +49,24 @@
     <ClInclude Include="Resource.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="KDicomD\KDicom.h">
+      <Filter>KDicomD</Filter>
+    </ClInclude>
+    <ClInclude Include="KDicomD\KDicomDS.h">
+      <Filter>KDicomD</Filter>
+    </ClInclude>
+    <ClInclude Include="KDicomD\KDicomElement.h">
+      <Filter>KDicomD</Filter>
+    </ClInclude>
+    <ClInclude Include="KDicomD\KDicomFileMap.h">
+      <Filter>KDicomD</Filter>
+    </ClInclude>
+    <ClInclude Include="KDicomD\KDicomQuery.h">
+      <Filter>KDicomD</Filter>
+    </ClInclude>
+    <ClInclude Include="KDicomD\mlConv.h">
+      <Filter>KDicomD</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HelloWorld.cpp">
@@ -56,6 +80,27 @@
     </ClCompile>
     <ClCompile Include="ChildView.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="KDicomD\KDicomDS.cpp">
+      <Filter>KDicomD</Filter>
+    </ClCompile>
+    <ClCompile Include="KDicomD\KDicomDSDecode.cpp">
+      <Filter>KDicomD</Filter>
+    </ClCompile>
+    <ClCompile Include="KDicomD\KDicomDSEncode.cpp">
+      <Filter>KDicomD</Filter>
+    </ClCompile>
+    <ClCompile Include="KDicomD\KDicomElement.cpp">
+      <Filter>KDicomD</Filter>
+    </ClCompile>
+    <ClCompile Include="KDicomD\KDicomFileMap.cpp">
+      <Filter>KDicomD</Filter>
+    </ClCompile>
+    <ClCompile Include="KDicomD\KDicomQuery.cpp">
+      <Filter>KDicomD</Filter>
+    </ClCompile>
+    <ClCompile Include="KDicomD\mlConv.cpp">
+      <Filter>KDicomD</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
