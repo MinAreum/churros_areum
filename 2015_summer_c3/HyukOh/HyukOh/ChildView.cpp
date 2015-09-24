@@ -388,14 +388,14 @@ void CChildView::OnFilterBlur() // filter box
 	short * dst = (short *) dstData;
 
 	IppiSize roiSize;
-	roiSize.height	= height;
-	roiSize.width	= width;
+	roiSize.height	= height-2;
+	roiSize.width	= width-2;
 	IppiSize maskSize;
-	maskSize.height = 3;
-	maskSize.width  = 3;
+	maskSize.height = 5;
+	maskSize.width  = 5;
 	IppiPoint anchor;
-	anchor.x = 1;
-	anchor.y = 1;
+	anchor.x = 2;
+	anchor.y = 2;
 
 	ippiFilterBox_16s_C1R(src, srcStep, dst, srcStep, roiSize, maskSize,anchor);
 	Trans16to8();
@@ -413,8 +413,8 @@ void CChildView::OnFilterSharpen() //fixed filter
 
 	IppiSize roiSize;
 
-	roiSize.height	= height;
-	roiSize.width	= width;
+	roiSize.height	= height-2;
+	roiSize.width	= width-2;
 
 	ippiFilterSharpen_16s_C1R(src, srcStep, dst, srcStep, roiSize);
 	Trans16to8();
