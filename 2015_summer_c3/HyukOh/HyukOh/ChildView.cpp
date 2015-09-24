@@ -340,8 +340,14 @@ void CChildView::OnGeometryRotateLeft()
 	//IppiSize roiSize;
 	//roiSize.height	= height;
 	//roiSize.width	= width;
+	//IppiSize srcSize;
+	//IppiRect srcROI;
 
-	//ippiRotate_16u_C1R();
+	//double xShift;
+	//double yShift;
+	//double interpolation;
+
+	//ippiRotate_16u_C1R(*src, srcSize, srcStep, srcROI, *dst, srcStep, srcROI, (1,0), 1, 0, interpolation);
 	//Trans16to8();
 	//Invalidate(FALSE);
 
@@ -349,19 +355,27 @@ void CChildView::OnGeometryRotateLeft()
 
 void CChildView::OnGeometryRotateRight()
 {
-	//if(dibData == NULL)
-	//	return;
+	if(dibData == NULL)
+		return;
 
-	//short * src = (short *) srcData;
-	//short * dst = (short *) dstData;
+	unsigned short * src = (unsigned short *) srcData;
+	unsigned short * dst = (unsigned short *) dstData;
 
-	//IppiSize roiSize;
-	//roiSize.height	= height;
-	//roiSize.width	= width;
+	IppiSize srcSize;
+	IppiSize roiSize;
+	roiSize.height	= height;
+	roiSize.width	= width;
+	IppiRect srcROI;
+	IppiRect dstROI;
 
-	//ippiRotate_16u_C1R();
-	//Trans16to8();
-	//Invalidate(FALSE);
+	double xShift = 1;
+	double yShift = 0;
+	double angle = 270;
+	int interpolation;
+
+	ippiRotate_16u_C1R(src, srcSize, srcStep, srcROI, dst, srcStep, dstROI, angle, xShift, yShift, IPPI_INTER_LINEAR);
+	Trans16to8();
+	Invalidate(FALSE);
 
 }
 
